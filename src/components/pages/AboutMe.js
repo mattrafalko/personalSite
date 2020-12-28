@@ -1,6 +1,8 @@
 import React from 'react';
 
 const AboutMe = () => {
+  const techStack = [...'React, Node.js, Tailwind CSS, .Net, SQL'.split(',')];
+
   return (
     <div className='mb-2'>
       <h1 className='mb-2 text-2xl font-bold '>Matt Rafalko</h1>
@@ -11,6 +13,9 @@ const AboutMe = () => {
         error debitis corporis minima consequuntur voluptatem quidem maxime
         voluptates?
       </p>
+      {techStack.map((item, i) => (
+        <span key={i}>{item}</span>
+      ))}
     </div>
   );
 };
