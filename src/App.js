@@ -1,25 +1,20 @@
-import logo from './logo.svg';
+import { Fragment } from 'react';
+import MobileNav from './components/navigation/MobileNav';
+import AboutMe from './components/pages/AboutMe';
+import Resume from './components/pages/Resume';
 import './App.css';
-
-function App() {
+import Github from './components/pages/Github';
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Fragment>
+      <div className='bg-white h-screen px-3 py-4 mb-48'>
+        <AboutMe />
+        <Github />
+        <Resume />
+      </div>
+      <MobileNav />
+    </Fragment>
   );
-}
+};
 
 export default App;
