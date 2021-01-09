@@ -4,11 +4,15 @@ import axios from 'axios';
 const AboutMe = () => {
   const [userInfo, setUserInfo] = useState({});
 
-  useEffect(async () => {
+  const getData = async () => {
     const githubData = await axios.get(
       `https://api.github.com/users/mattrafalko?client_id=${process.env.REACT_APP_GITHUB_CLIENTID}&client_secret=${process.env.REACT_APP_GITHUB_CLIENTSECRET}`
     );
     setUserInfo(githubData.data);
+  };
+
+  useEffect(() => {
+    getData();
   }, []);
 
   return (
@@ -37,6 +41,7 @@ const AboutMe = () => {
             <img
               className='rounded-full overflow-none w-32 h-auto'
               src={userInfo.avatar_url}
+              alt='a picture of me and my dog, Apollo'
             />
           </div>
         </div>

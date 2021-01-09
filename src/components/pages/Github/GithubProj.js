@@ -3,7 +3,7 @@ import React from 'react';
 const GithubProj = ({ project }) => {
   return (
     <React.Fragment>
-      <a href={project.html_url} target='_blank'>
+      <a href={project.html_url} target='_blank' rel='noreferrer'>
         <div className='mb-4 px-2 py-3 flex'>
           <div className='flex-1 flex items-center'>
             <div className='px-3 py-2  w-3/4 text-center'>

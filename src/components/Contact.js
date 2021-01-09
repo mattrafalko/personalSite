@@ -14,12 +14,20 @@ const Contact = () => {
           </a>
         </div>
         <div className=''>
-          <a href='https://www.github.com/mattrafalko' target='_blank'>
+          <a
+            href='https://www.github.com/mattrafalko'
+            target='_blank'
+            rel='noreferrer'
+          >
             <ReactSVG src={Github} />
           </a>
         </div>
         <div className=''>
-          <a href='https://www.linkedin.com/in/mrafalko' target='_blank'>
+          <a
+            href='https://www.linkedin.com/in/mrafalko'
+            target='_blank'
+            rel='noreferrer'
+          >
             <ReactSVG src={Linkedin} />
           </a>
         </div>

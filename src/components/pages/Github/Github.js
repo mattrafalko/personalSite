@@ -5,15 +5,15 @@ import GithubProj from './GithubProj';
 const Github = () => {
   const [projects, setProjects] = useState([]);
 
-  const getGithubData = async () =>
-    axios.get(
+  const getData = async () => {
+    const githubData = await axios.get(
       `https://api.github.com/users/mattrafalko/repos?per_page=50&sort=created:asc&client_id=${process.env.REACT_APP_GITHUB_CLIENTID}&client_secret=${process.env.REACT_APP_GITHUB_CLIENTSECRET}`
     );
-
-  useEffect(async () => {
-    const githubData = await getGithubData();
-
     setProjects(githubData.data.filter((item) => !item.fork && !item.private));
+  };
+
+  useEffect(() => {
+    getData();
   }, []);
 
   return (
