@@ -18,7 +18,7 @@ const Github = () => {
 
   return (
     <div>
-      <h1 className='text-lg font-bold mb-1'>GitHub</h1>
+      <h1 className='text-lg font-bold mb-2'>GitHub Projects</h1>
       {projects && projects.length > 0 ? (
         projects.map((project, i) => <GithubProj project={project} key={i} />)
       ) : (

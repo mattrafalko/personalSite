@@ -1,3 +1,25 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.container {
+  @apply flex;
+  @apply flex-col;
+  @apply justify-center;
+  @apply mx-auto;
+  @apply max-w-2xl;
+}
+
+.projectLink {
+  box-shadow: -6px 6px 2px 1px rgba(5, 150, 105, 0.2);
+  transition: 0.3s;
+}
+
+.projectLink:hover {
+  box-shadow: -3px 3px 2px 1px rgba(0, 0, 255, 0.2);
+  transition: 0.3s;
+}
+
+#aboutCard {
+  transform: translateY(3rem);
+}
