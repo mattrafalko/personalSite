@@ -41,7 +41,7 @@ const AboutMe = () => {
             <img
               className='rounded-full overflow-none w-32 h-auto'
               src={userInfo.avatar_url}
-              alt='a picture of me and my dog, Apollo'
+              alt='me and my dog, Apollo'
             />
           </div>
         </div>
