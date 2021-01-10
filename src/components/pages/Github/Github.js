@@ -4,12 +4,14 @@ import GithubProj from './GithubProj';
 
 const Github = () => {
   const [projects, setProjects] = useState([]);
+  const [loading, setLoading] = useState(true);
 
   const getData = async () => {
     const githubData = await axios.get(
       `https://api.github.com/users/mattrafalko/repos?per_page=50&sort=created:asc&client_id=${process.env.REACT_APP_GITHUB_CLIENTID}&client_secret=${process.env.REACT_APP_GITHUB_CLIENTSECRET}`
     );
     setProjects(githubData.data.filter((item) => !item.fork && !item.private));
+    setLoading(false);
   };
 
   useEffect(() => {
@@ -17,13 +19,15 @@ const Github = () => {
   }, []);
 
   return (
-    <div>
+    <div className={`${loading ? 'animate-pulse' : null}`}>
       <h1 className='text-lg font-bold mb-2'>GitHub Projects</h1>
-      {projects && projects.length > 0 ? (
-        projects.map((project, i) => <GithubProj project={project} key={i} />)
-      ) : (
-        <span> Loading...</span>
-      )}
+      <div>
+        {projects && projects.length > 0 ? (
+          projects.map((project, i) => <GithubProj project={project} key={i} />)
+        ) : (
+          <span> Loading...</span>
+        )}
+      </div>
     </div>
   );
 };
