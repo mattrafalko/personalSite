@@ -2,13 +2,19 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { motion } from 'framer-motion';
 const AboutMe = () => {
-  const [userInfo, setUserInfo] = useState({});
+  const [githubUserInfo, setGithubUserInfo] = useState({});
+
+  const userInfo = {
+    description:
+      'A software developer with a passion for anything front-end.\nLets work together.',
+    imgAlt: 'My dog Apollo and I',
+  };
 
   const getData = async () => {
     const githubData = await axios.get(
       `https://api.github.com/users/mattrafalko?client_id=${process.env.REACT_APP_GITHUB_CLIENTID}&client_secret=${process.env.REACT_APP_GITHUB_CLIENTSECRET}`
     );
-    setUserInfo(githubData.data);
+    setGithubUserInfo(githubData.data);
   };
 
   useEffect(() => {
@@ -26,32 +32,31 @@ const AboutMe = () => {
         >
           <div>
             <h1 className='text-2xl font-bold text-gray-900'>
-              {userInfo.name}
+              {githubUserInfo.name}
             </h1>
             <h2 className='font-md text-gray-800 mb-2'>
-              {userInfo.bio} •{' '}
+              {githubUserInfo.bio} •{' '}
               <a
                 className='text-green-600'
-                href={`https://www.${userInfo.company}.com`}
+                href={`https://www.${githubUserInfo.company}.com`}
                 target='_blank'
                 rel='noreferrer'
               >
-                {userInfo.company}
+                {githubUserInfo.company}
               </a>
             </h2>
 
             <div className='flex flex-col mb-2'>
-              <span className='text-gray-700'>
-                A software developer with a passion for anything front-end.
-              </span>
-              <span className='text-gray-700'> Lets work together.</span>
+              <p className='text-gray-700 whitespace-pre-wrap'>
+                {userInfo.description}
+              </p>
             </div>
           </div>
           <div className=''>
             <img
               className='rounded-full overflow-none w-32 h-auto border-2 border-green-500 shadow-lg'
-              src={userInfo.avatar_url}
-              alt='My dog Apollo and I'
+              src={githubUserInfo.avatar_url}
+              alt={userInfo.imgAlt}
             />
           </div>
         </motion.div>
