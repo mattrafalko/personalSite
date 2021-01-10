@@ -16,7 +16,7 @@ const AboutMe = () => {
       `https://api.github.com/users/mattrafalko?client_id=${process.env.REACT_APP_GITHUB_CLIENTID}&client_secret=${process.env.REACT_APP_GITHUB_CLIENTSECRET}`
     );
     setGithubUserInfo(githubData.data);
-    //setLoading(false);
+    setLoading(false);
   };
 
   useEffect(() => {
