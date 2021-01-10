@@ -1,7 +1,7 @@
 export const userData = {
   links: {
     linkedIn: 'https://www.linkedin.com/in/mrafalko',
-    email: 'mattrafalko@gmail.com',
+    email: 'mailto:mattrafalko@gmail.com',
     github: 'https://www.github.com',
   },
   aboutMe: {

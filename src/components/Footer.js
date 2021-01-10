@@ -16,7 +16,7 @@ const Footer = () => {
 
   const footerIcons = items.map((item, i) => (
     <motion.div whileHover={{ scale: 1.2 }} key={i}>
-      <a href={`mailto:${item.link}`}>
+      <a href={item.link}>
         <ReactSVG src={item.icon} />
       </a>
     </motion.div>
