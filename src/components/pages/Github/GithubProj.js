@@ -7,7 +7,7 @@ const GithubProj = ({ project }) => {
         <div className='mb-4 px-2 py-3 flex'>
           <div className='flex-1 flex items-center'>
             <div className='w-3/4 text-center projectLink'>
-              <h3 className=' md:text-lg text-sm text-gray-100 bg-gray-900'>
+              <h3 className=' md:text-lg text-sm text-gray-100 bg-gray-900 hover:text-purple-100'>
                 {project.name}
               </h3>
             </div>

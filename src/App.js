@@ -11,7 +11,7 @@ const App = () => {
     <Fragment>
       <AboutMe />
       <motion.div
-        className='container px-3 py-4 pt-20 mb-48'
+        className='container px-3 py-4 pt-20 mb-24'
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 0.3, duration: 1 }}
