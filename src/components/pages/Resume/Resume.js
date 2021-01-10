@@ -43,14 +43,15 @@ const Resume = () => {
     <div className='mb-4'>
       <div className='w-full flex justify-between items-center'>
         <h2 className='text-lg font-bold'>Resume</h2>
-        <motion.span
+
+        <motion.a
           className='text-sm  text-green-600'
+          href={ResumeDoc}
+          download={ResumeDoc}
           whileHover={{ scale: 1.05 }}
         >
-          <a href={ResumeDoc} download={ResumeDoc}>
-            Download
-          </a>
-        </motion.span>
+          Download
+        </motion.a>
       </div>
       <div className='mb-4 divide-y-2'>
         {resumeData && resumeData.length > 0 ? (
