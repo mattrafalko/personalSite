@@ -52,7 +52,7 @@ const Resume = () => {
           </a>
         </motion.span>
       </div>
-      <div className='mb-4'>
+      <div className='mb-4 divide-y-2'>
         {resumeData && resumeData.length > 0 ? (
           resumeData.map((item, i) => <ResumeItem data={item} key={i} />)
         ) : (
