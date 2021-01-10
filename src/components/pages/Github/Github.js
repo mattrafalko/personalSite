@@ -15,7 +15,7 @@ const Github = () => {
         {!loading && projects && projects.length > 0 ? (
           projects.map((project, i) => <GithubProj project={project} key={i} />)
         ) : (
-          <span> Loading...</span>
+          <Loader />
         )}
       </div>
     </div>
