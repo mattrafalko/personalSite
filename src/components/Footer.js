@@ -1,17 +1,14 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import { ReactSVG } from 'react-svg';
 import Email from '../assets/icons/email.svg';
 import Github from '../assets/icons/github.svg';
 import Linkedin from '../assets/icons/linkedin.svg';
 import { motion } from 'framer-motion';
-import { GithubContext } from '../context/GitHubContext';
 import { userData } from '../Config';
 
 const Footer = () => {
   const icons = { email: Email, linkedIn: Linkedin, github: Github };
-
-  const { githubUserInfo } = useContext(GithubContext);
-  const links = { ...userData.links, github: githubUserInfo?.html_url };
+  const { links } = userData;
 
   const items = Object.keys(icons).map((x) => {
     return { link: links[x], icon: icons[x] };
