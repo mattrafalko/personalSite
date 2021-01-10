@@ -2,17 +2,14 @@ import React, { useContext } from 'react';
 import { motion } from 'framer-motion';
 import { LoadingContext } from '../../context/LoadingContext';
 import { GithubContext } from '../../context/GitHubContext';
+import { userData } from '../../Config';
 import Spinner from '../loaders/Spinner';
 
 const AboutMe = () => {
   const { loading } = useContext(LoadingContext);
   const { githubUserInfo } = useContext(GithubContext);
 
-  const userInfo = {
-    description:
-      'A software developer with a passion for anything front-end.\nLets work together.',
-    imgAlt: 'My dog Apollo and I',
-  };
+  const { aboutMe } = userData;
 
   return (
     <div className='bg-gray-900 shadow-2xl'>
@@ -42,7 +39,7 @@ const AboutMe = () => {
                 </h2>
                 <div className='flex flex-col mb-2'>
                   <p className='text-gray-700 whitespace-pre-wrap'>
-                    {userInfo.description}
+                    {aboutMe.description}
                   </p>
                 </div>
               </div>
@@ -50,7 +47,7 @@ const AboutMe = () => {
                 <img
                   className='rounded-full overflow-none w-32 h-auto border-2 border-green-500 shadow-lg'
                   src={githubUserInfo.avatar_url}
-                  alt={userInfo.imgAlt}
+                  alt={aboutMe.imgAlt}
                 />
               </div>
             </React.Fragment>

@@ -2,42 +2,10 @@ import React from 'react';
 import ResumeItem from './ResumeItem';
 import ResumeDoc from '../../../assets/Resume.pdf';
 import { motion } from 'framer-motion';
+import { userData } from '../../../Config';
 
 const Resume = () => {
-  const resumeData = [
-    {
-      company: 'Uline',
-      title: 'Software Developer',
-      dates: {
-        start: '2/2020',
-        end: 'Current',
-      },
-    },
-    {
-      company: 'Milliman IntelliScript',
-      title: 'Client Integration Engineer',
-      dates: {
-        start: '2/2018',
-        end: '2/2020',
-      },
-    },
-    {
-      company: 'OmniVista Solutions',
-      title: 'System Analyst - Intern',
-      dates: {
-        start: '1/2017',
-        end: '5/2017',
-      },
-    },
-    {
-      company: 'Iowa State Foundation',
-      title: 'Program Assistant',
-      dates: {
-        start: '9/2013',
-        end: '8/2016',
-      },
-    },
-  ];
+  const { resumeData } = userData;
 
   return (
     <div className='mb-4'>

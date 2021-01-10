@@ -13,10 +13,3 @@ export const getGithubProjectdata = async () => {
   let filtered = projects.data.filter((x) => x.fork === false);
   return filtered;
 };
-
-export const userData = {
-  links: {
-    linkedIn: 'https://www.linkedin.com/in/mrafalko',
-    email: 'mattrafalko@gmail.com',
-  },
-};
