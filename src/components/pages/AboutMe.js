@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-
+import { motion } from 'framer-motion';
 const AboutMe = () => {
   const [userInfo, setUserInfo] = useState({});
 
@@ -18,8 +18,10 @@ const AboutMe = () => {
   return (
     <div className='bg-gray-900 '>
       <div className='container mb-2'>
-        <div
-          id='aboutCard'
+        <motion.div
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 36 }}
+          transition={{ delay: 0.5, duration: 0.75 }}
           className='bg-gray-100 border-2 border-gray-200 rounded px-4 py-3 mx-3 shadow-2xl flex justify-between items-center'
         >
           <div>
@@ -44,7 +46,7 @@ const AboutMe = () => {
               alt='me and my dog, Apollo'
             />
           </div>
-        </div>
+        </motion.div>
       </div>
     </div>
   );

@@ -1,6 +1,7 @@
 import React from 'react';
 import ResumeItem from './ResumeItem';
 import ResumeDoc from '../../../assets/Resume.pdf';
+import { motion } from 'framer-motion';
 
 const Resume = () => {
   const resumeData = [
@@ -42,11 +43,14 @@ const Resume = () => {
     <div className='mb-4'>
       <div className='w-full flex justify-between items-center'>
         <h2 className='text-lg font-bold'>Resume</h2>
-        <span className='text-sm italic'>
+        <motion.span
+          className='text-sm italic text-gray-600'
+          whileHover={{ scale: 1.05 }}
+        >
           <a href={ResumeDoc} download={ResumeDoc}>
             Download
           </a>
-        </span>
+        </motion.span>
       </div>
       <div className='mb-4'>
         {resumeData && resumeData.length > 0 ? (
