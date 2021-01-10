@@ -9,7 +9,7 @@ const Footer = () => {
   return (
     <React.Fragment>
       <div className='bg-gray-900 fixed bottom-0 px-5 py-4 w-full flex border-t-2 border-green-500'>
-        <div className='max-w-2xl w-full flex justify-between mx-auto'>
+        <div className='max-w-2xl w-full flex justify-between mx-auto pb-1'>
           <motion.div className='' whileHover={{ scale: 1.2 }}>
             <a href='mailto:mattrafalko@gmail.com'>
               <ReactSVG src={Email} />
