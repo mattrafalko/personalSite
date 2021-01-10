@@ -3,7 +3,7 @@ import AboutMe from './components/pages/AboutMe';
 import Resume from './components/pages/Resume/Resume';
 import './App.css';
 import Github from './components/pages/Github/Github';
-import Contact from './components/Contact';
+import Footer from './components/Footer';
 import { motion } from 'framer-motion';
 
 const App = () => {
@@ -19,7 +19,7 @@ const App = () => {
         <Resume />
         <Github />
       </motion.div>
-      <Contact />
+      <Footer />
     </Fragment>
   );
 };
