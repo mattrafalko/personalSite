@@ -29,7 +29,15 @@ const AboutMe = () => {
               {userInfo.name}
             </h1>
             <h2 className='font-md text-gray-700 mb-2'>
-              {userInfo.bio} • {userInfo.company}
+              {userInfo.bio} •{' '}
+              <a
+                className='text-green-600'
+                href={`https://www.${userInfo.company}.com`}
+                target='_blank'
+                rel='noreferrer'
+              >
+                {userInfo.company}
+              </a>
             </h2>
 
             <div className='flex flex-col mb-2'>
@@ -41,9 +49,9 @@ const AboutMe = () => {
           </div>
           <div className=''>
             <img
-              className='rounded-full overflow-none w-32 h-auto'
+              className='rounded-full overflow-none w-32 h-auto border-2 border-green-500'
               src={userInfo.avatar_url}
-              alt='me and my dog, Apollo'
+              alt='My dog Apollo and I'
             />
           </div>
         </motion.div>
