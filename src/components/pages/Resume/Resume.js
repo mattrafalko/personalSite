@@ -44,7 +44,7 @@ const Resume = () => {
       <div className='w-full flex justify-between items-center'>
         <h2 className='text-lg font-bold'>Resume</h2>
         <motion.span
-          className='text-sm italic text-gray-600'
+          className='text-sm  text-green-600'
           whileHover={{ scale: 1.05 }}
         >
           <a href={ResumeDoc} download={ResumeDoc}>
