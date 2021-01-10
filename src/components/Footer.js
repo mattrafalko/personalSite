@@ -15,7 +15,7 @@ const Footer = () => {
   });
 
   const footerIcons = items.map((item, i) => (
-    <motion.div whileHover={{ scale: 1.2 }} key={i}>
+    <motion.div whileHover={{ scale: 1.2 }} whileTap={{ scale: 0.8 }} key={i}>
       <a href={item.link} target='_blank' rel='noreferrer'>
         <ReactSVG src={item.icon} />
       </a>

@@ -17,6 +17,7 @@ const Resume = () => {
           href={ResumeDoc}
           download={ResumeDoc}
           whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.8 }}
         >
           Download
         </motion.a>
