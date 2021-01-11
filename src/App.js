@@ -42,8 +42,6 @@ const App = () => {
           >
             <Suspense fallback={Loader}>
               <ResumeComponent />
-            </Suspense>
-            <Suspense fallback={Loader}>
               <GithubComponent />
             </Suspense>
           </motion.div>
