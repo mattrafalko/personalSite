@@ -1,4 +1,3 @@
-import React from 'react';
 import ResumeItem from './ResumeItem';
 import ResumeDoc from '../../../assets/Resume.pdf';
 import { motion } from 'framer-motion';
@@ -13,7 +12,7 @@ const Resume = () => {
         <h2 className='text-lg font-bold'>Resume</h2>
 
         <motion.a
-          className='text-sm  text-green-600'
+          className='text-sm  text-green-700'
           href={ResumeDoc}
           download={ResumeDoc}
           whileHover={{ scale: 1.05 }}

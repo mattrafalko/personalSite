@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import { useContext, Fragment } from 'react';
 import { motion } from 'framer-motion';
 import { LoadingContext } from '../../context/LoadingContext';
 import { GithubContext } from '../../context/GitHubContext';
@@ -21,7 +21,7 @@ const AboutMe = () => {
           className='bg-gray-100 border-2 border-gray-200 rounded px-4 py-3 mx-3 shadow-xl flex justify-between items-center'
         >
           {!loading && githubUserInfo ? (
-            <React.Fragment>
+            <Fragment>
               <div>
                 <h1 className='text-2xl font-bold text-gray-900'>
                   {githubUserInfo.name}
@@ -29,7 +29,7 @@ const AboutMe = () => {
                 <h2 className='font-md text-gray-800 mb-2'>
                   {githubUserInfo.bio} •{' '}
                   <a
-                    className='text-green-600'
+                    className='text-green-700'
                     href={`https://www.${githubUserInfo.company}.com`}
                     target='_blank'
                     rel='noreferrer'
@@ -50,7 +50,7 @@ const AboutMe = () => {
                   alt={aboutMe.imgAlt}
                 />
               </div>
-            </React.Fragment>
+            </Fragment>
           ) : (
             <Spinner />
           )}

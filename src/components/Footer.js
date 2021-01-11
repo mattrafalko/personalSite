@@ -1,4 +1,4 @@
-import React from 'react';
+import { Fragment } from 'react';
 import { ReactSVG } from 'react-svg';
 import Email from '../assets/icons/email.svg';
 import Github from '../assets/icons/github.svg';
@@ -11,25 +11,28 @@ const Footer = () => {
   const { links } = userData;
 
   const items = Object.keys(icons).map((x) => {
-    return { link: links[x], icon: icons[x] };
+    return { link: links[x], icon: icons[x], name: x };
   });
 
   const footerIcons = items.map((item, i) => (
-    <motion.div whileHover={{ scale: 1.2 }} whileTap={{ scale: 0.8 }} key={i}>
+    <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.8 }} key={i}>
       <a href={item.link} target='_blank' rel='noreferrer'>
-        <ReactSVG src={item.icon} />
+        <div className='flex flex-col items-center'>
+          <ReactSVG src={item.icon} className='mb-0.5' />
+          <div className='text-gray-200 text-xs'>{item.name}</div>
+        </div>
       </a>
     </motion.div>
   ));
 
   return (
-    <React.Fragment>
-      <div className='bg-gray-900 fixed bottom-0 px-5 py-4 w-full flex border-t-2 border-green-500'>
+    <Fragment>
+      <div className='bg-gray-900 fixed bottom-0 px-5 py-2 w-full flex border-t-2 border-green-500'>
         <div className='max-w-2xl w-full flex justify-between mx-auto pb-1'>
           {footerIcons}
         </div>
       </div>
-    </React.Fragment>
+    </Fragment>
   );
 };
 
