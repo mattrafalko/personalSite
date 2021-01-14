@@ -1,4 +1,4 @@
-import { Fragment, useState, useEffect, lazy, Suspense } from 'react';
+import { Fragment, useState, useEffect } from 'react';
 import AboutMe from './components/pages/AboutMe';
 import './App.css';
 import Footer from './components/Footer';
@@ -6,10 +6,8 @@ import { motion } from 'framer-motion';
 import { GithubContext } from './context/GitHubContext';
 import { LoadingContext } from './context/LoadingContext';
 import { getGithubProjectdata, getGithubUserData } from './context/UserData';
-import Loader from './components/loaders/Loader';
-
-const ResumeComponent = lazy(() => import('./components/pages/Resume/Resume'));
-const GithubComponent = lazy(() => import('./components/pages/Github/Github'));
+import Resume from './components/pages/Resume/Resume';
+import Github from './components/pages/Github/Github';
 
 const App = () => {
   const [projects, setProjects] = useState(null);
@@ -40,10 +38,8 @@ const App = () => {
             animate={{ opacity: 1 }}
             transition={{ delay: 0.3, duration: 1 }}
           >
-            <Suspense fallback={Loader}>
-              <ResumeComponent />
-              <GithubComponent />
-            </Suspense>
+            <Resume />
+            <Github />
           </motion.div>
           <Footer />
         </GithubContext.Provider>
