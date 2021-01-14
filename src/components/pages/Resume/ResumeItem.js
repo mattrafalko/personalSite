@@ -16,7 +16,6 @@ const ResumeItem = ({ data }) => {
       </div>
     );
   }
-  return null;
 };
 
 export default ResumeItem;
