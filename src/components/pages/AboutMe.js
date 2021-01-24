@@ -9,7 +9,8 @@ const AboutMe = () => {
   const { loading } = useContext(LoadingContext);
   const { githubUserInfo } = useContext(GithubContext);
 
-  const { aboutMe } = userData;
+  const { aboutMe, resumeData } = userData;
+  const currentEmployer = resumeData[0];
 
   return (
     <div className='bg-gray-900 shadow-2xl'>
@@ -27,14 +28,14 @@ const AboutMe = () => {
                   {githubUserInfo.name}
                 </h1>
                 <h2 className='font-md text-gray-800 mb-2'>
-                  {githubUserInfo.bio} •{' '}
+                  {currentEmployer.title} •{' '}
                   <a
                     className='text-green-700'
-                    href={`https://www.${githubUserInfo.company}.com`}
+                    href={currentEmployer.companySite}
                     target='_blank'
                     rel='noreferrer'
                   >
-                    {githubUserInfo.company}
+                    {currentEmployer.company}
                   </a>
                 </h2>
                 <div className='flex flex-col mb-2'>
