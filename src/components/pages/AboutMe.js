@@ -26,8 +26,8 @@ const AboutMe = () => {
             <div className='flex flex-col lg:flex-row lg:justify-between lg:w-full w-full mx-auto'>
               <div className='flex flex-col items-center lg:items-baseline '>
                 <h1 id='names' className='text-2xl font-bold text-gray-900'>
-                  <span class='name'> {githubUserInfo.name}</span>
-                  <span class='altName text-red-600'>
+                  <span className='name'> {githubUserInfo.name}</span>
+                  <span className='altName text-red-600'>
                     {aboutMe.altName} <Emoji symbol='🇵🇱' label='polish flag' />
                   </span>
                 </h1>
