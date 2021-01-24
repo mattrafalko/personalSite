@@ -10,7 +10,6 @@ const Resume = () => {
     <div className='mb-4'>
       <div className='w-full flex justify-between items-center'>
         <h2 className='text-lg font-bold'>Resume</h2>
-
         <motion.a
           className='text-sm  text-green-700'
           href={ResumeDoc}

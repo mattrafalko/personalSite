@@ -4,6 +4,7 @@ import { LoadingContext } from '../../context/LoadingContext';
 import { GithubContext } from '../../context/GitHubContext';
 import { userData } from '../../Config';
 import Spinner from '../loaders/Spinner';
+import Emoji from '../Emoji';
 
 const AboutMe = () => {
   const { loading } = useContext(LoadingContext);
@@ -24,9 +25,13 @@ const AboutMe = () => {
           {!loading && githubUserInfo ? (
             <Fragment>
               <div>
-                <h1 className='text-2xl font-bold text-gray-900'>
-                  {githubUserInfo.name}
+                <h1 id='names' className='text-2xl font-bold text-gray-900'>
+                  <span class='name'> {githubUserInfo.name}</span>
+                  <span class='altName text-red-600'>
+                    {aboutMe.altName} <Emoji symbol='🇵🇱' label='polish flag' />
+                  </span>
                 </h1>
+
                 <h2 className='font-md text-gray-800 mb-2'>
                   {currentEmployer.title} •{' '}
                   <a

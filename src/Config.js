@@ -8,6 +8,7 @@ export const userData = {
     description:
       'A software developer with a passion for anything front-end.\nLets work together.',
     imgAlt: 'My dog Apollo and I',
+    altName: 'Mateusz Rafałko',
   },
   resumeData: [
     {
