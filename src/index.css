@@ -13,6 +13,7 @@
 #names:hover .altName {
   visibility: visible;
   opacity: 1;
+  position: initial;
 }
 
 .name {
@@ -23,6 +24,7 @@
 .altName {
   opacity: 0;
   transition: visibility 0s, opacity 1s ease-out;
+  position: absolute;
 }
 
 .container {
