@@ -51,7 +51,7 @@ const AboutMe = () => {
               </div>
               <div className='flex justify-center md:justify-end'>
                 <img
-                  className='rounded-full overflow-none w-32 h-32 lg:h-auto  border-2 border-green-500 shadow-2xl lg:shadow-lg mx-auto transform translate-y-16 -mt-16 lg:mt-0 lg:translate-y-0'
+                  className='rounded-full overflow-none w-32 h-32 border-2 border-green-500 shadow-2xl lg:shadow-lg mx-auto transform translate-y-16 -mt-16 lg:mt-0 lg:translate-y-0'
                   src={githubUserInfo.avatar_url}
                   alt={aboutMe.imgAlt}
                 />
