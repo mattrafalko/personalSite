@@ -13,7 +13,7 @@ const Resume = () => {
         <motion.a
           className='text-sm  text-green-700'
           href={ResumeDoc}
-          download={ResumeDoc}
+          download='Matt Rafalko Resume.pdf'
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.8 }}
         >
