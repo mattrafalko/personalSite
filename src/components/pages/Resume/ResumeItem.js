@@ -1,6 +1,6 @@
 const ResumeItem = ({ data }) => {
   return (
-    <div className='mt-2 '>
+    <div className='mt-2'>
       <h3 className='text-md mb-1 font-bold hover:text-green-700 transition duration-500 ease-in-out'>
         <a href={data.companySite} target='_blank' rel='noreferrer'>
           {data.company}
