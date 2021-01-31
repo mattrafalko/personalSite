@@ -35,7 +35,7 @@ const AboutMe = () => {
                 <h2 className='font-md text-gray-800 mb-2'>
                   {currentEmployer.title} •{' '}
                   <a
-                    className='text-green-700'
+                    className='text-gray-500'
                     href={currentEmployer.companySite}
                     target='_blank'
                     rel='noreferrer'
@@ -51,7 +51,7 @@ const AboutMe = () => {
               </div>
               <div className='flex justify-center md:justify-end'>
                 <img
-                  className='rounded-full overflow-none w-32 h-32 border-2 border-green-500 shadow-2xl lg:shadow-lg mx-auto transform translate-y-16 -mt-16 lg:mt-0 lg:translate-y-0'
+                  className='rounded-full overflow-none w-32 h-32 border-2 border-gray-200 shadow-2xl lg:shadow-lg mx-auto transform translate-y-16 -mt-16 lg:mt-0 lg:translate-y-0'
                   src={githubUserInfo.avatar_url}
                   alt={aboutMe.imgAlt}
                 />
