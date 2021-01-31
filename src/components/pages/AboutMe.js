@@ -14,13 +14,13 @@ const AboutMe = () => {
   const currentEmployer = resumeData[0];
 
   return (
-    <div className='bg-gray-100 dark:bg-gray-900 shadow-sm border-b-2 dark:border-gray-900'>
+    <div className='bg-gray-100 dark:bg-gray-900 shadow-sm border-b-2 dark:border-gray-900 lg:max-h-32 lg:mb-8'>
       <div className='container mb-2 max-w-sm lg:max-w-2xl'>
         <motion.div
           initial={{ opacity: 0, y: 10 }}
-          animate={{ opacity: 1, y: 36 }}
+          animate={{ opacity: 1, y: 38 }}
           transition={{ delay: 0.5, duration: 0.75 }}
-          className='bg-white dark:bg-gray-700 border-2 border-gray-200 dark:border-gray-700 rounded px-4 py-3 mx-3 shadow-lg hover:shadow-xl flex justify-between items-center'
+          className='bg-white dark:bg-gray-800 border-2 border-gray-200 dark:border-gray-700 rounded px-4 py-3 mx-3 shadow-lg hover:shadow-xl flex justify-between items-center'
         >
           {!loading && githubUserInfo ? (
             <div className='flex flex-col lg:flex-row lg:justify-between lg:w-full w-full mx-auto'>
@@ -38,7 +38,7 @@ const AboutMe = () => {
                 <h2 className='font-md text-gray-800 dark:text-gray-200 mb-2'>
                   {currentEmployer.title} •{' '}
                   <a
-                    className='text-gray-300 dark:text-indigo-300'
+                    className='text-gray-600 dark:text-indigo-300'
                     href={currentEmployer.companySite}
                     target='_blank'
                     rel='noreferrer'

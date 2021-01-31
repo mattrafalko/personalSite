@@ -28,7 +28,7 @@ const App = () => {
   }, []);
 
   return (
-    <div className='dark:bg-gray-800 '>
+    <div>
       <LoadingContext.Provider value={{ loading }}>
         <GithubContext.Provider value={{ projects, githubUserInfo }}>
           <AboutMe />

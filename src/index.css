@@ -2,6 +2,20 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+  @apply dark:bg-gray-800;
+}
+
+svg {
+  fill: black;
+}
+
+@media (prefers-color-scheme: dark) {
+  svg {
+    fill: #72a5f880;
+  }
+}
+
 #names .altName {
   visibility: hidden;
 }
@@ -33,16 +47,6 @@
   @apply justify-center;
   @apply mx-auto;
   @apply max-w-2xl;
-}
-
-.projectLink {
-  box-shadow: -6px 6px 2px 1px rgba(5, 150, 105, 0.5);
-  transition: 0.3s;
-}
-
-.projectLink:hover {
-  box-shadow: -3px 3px 2px 1px rgba(0, 0, 255, 0.5);
-  transition: 0.3s;
 }
 
 .spinner {

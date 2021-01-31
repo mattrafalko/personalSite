@@ -19,7 +19,7 @@ const Footer = () => {
       <a href={item.link} target='_blank' rel='noreferrer'>
         <div className='flex flex-col items-center'>
           <ReactSVG src={item.icon} className='mb-0.5' />
-          <div className='text-gray-900 dark:text-gray-100 text-xs'>
+          <div className='text-gray-900 dark:text-indigo-300 text-xs'>
             {item.name}
           </div>
         </div>
