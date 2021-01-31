@@ -14,6 +14,9 @@ svg {
   svg {
     fill: #72a5f880;
   }
+  img {
+    filter: brightness(0.8) contrast(1.2);
+  }
 }
 
 #names .altName {
