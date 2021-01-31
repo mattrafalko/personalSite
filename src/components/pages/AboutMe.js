@@ -14,13 +14,13 @@ const AboutMe = () => {
   const currentEmployer = resumeData[0];
 
   return (
-    <div className='bg-gray-900 shadow-2xl'>
+    <div className='bg-gray-100 shadow-sm border-b-2'>
       <div className='container mb-2 max-w-sm lg:max-w-2xl'>
         <motion.div
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 36 }}
           transition={{ delay: 0.5, duration: 0.75 }}
-          className='bg-gray-100 border-2 border-gray-200 rounded px-4 py-3 mx-3 shadow-xl flex justify-between items-center'
+          className='bg-white border-2 border-gray-200 rounded px-4 py-3 mx-3 shadow-lg hover:shadow-xl flex justify-between items-center'
         >
           {!loading && githubUserInfo ? (
             <div className='flex flex-col lg:flex-row lg:justify-between lg:w-full w-full mx-auto'>
