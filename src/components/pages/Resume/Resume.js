@@ -11,7 +11,7 @@ const Resume = () => {
       <div className='w-full flex justify-between items-center'>
         <h2 className='text-lg font-bold'>Resume</h2>
         <motion.a
-          className='text-sm  text-green-700'
+          className='text-sm  text-gray-700'
           href={ResumeDoc}
           download='Matt Rafalko Resume.pdf'
           whileHover={{ scale: 1.05 }}
