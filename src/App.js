@@ -1,4 +1,4 @@
-import { Fragment, useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import AboutMe from './components/pages/AboutMe';
 import './App.css';
 import Footer from './components/Footer';
@@ -28,7 +28,7 @@ const App = () => {
   }, []);
 
   return (
-    <Fragment>
+    <div className='dark:bg-gray-800 '>
       <LoadingContext.Provider value={{ loading }}>
         <GithubContext.Provider value={{ projects, githubUserInfo }}>
           <AboutMe />
@@ -44,7 +44,7 @@ const App = () => {
           <Footer />
         </GithubContext.Provider>
       </LoadingContext.Provider>
-    </Fragment>
+    </div>
   );
 };
 
