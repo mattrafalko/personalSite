@@ -12,7 +12,7 @@ svg {
 
 @media (prefers-color-scheme: dark) {
   svg {
-    fill: #72a5f880;
+    fill: #6366f1;
   }
   img {
     filter: brightness(0.8) contrast(1.2);

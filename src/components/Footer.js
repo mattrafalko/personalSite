@@ -19,7 +19,7 @@ const Footer = () => {
       <a href={item.link} target='_blank' rel='noreferrer'>
         <div className='flex flex-col items-center'>
           <ReactSVG src={item.icon} className='mb-0.5' />
-          <div className='text-gray-900 dark:text-indigo-300 text-xs'>
+          <div className='text-gray-900 dark:text-indigo-400 text-xs'>
             {item.name}
           </div>
         </div>
@@ -29,7 +29,7 @@ const Footer = () => {
 
   return (
     <Fragment>
-      <div className='bg-gray-100 dark:bg-gray-900 fixed bottom-0 px-5 py-2 w-full flex border-t-2 dark:border-indigo-300'>
+      <div className='bg-gray-100 dark:bg-gray-900 fixed bottom-0 px-5 py-2 w-full flex border-t-2 dark:border-indigo-400'>
         <div className='max-w-2xl w-full flex justify-between mx-auto pb-1'>
           {footerIcons}
         </div>
